@@ -29,6 +29,16 @@
             "projectName": "api-gateway",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MobileAppApplication<mobile-app>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.developcourse.app.ws.mobile_app.MobileAppApplication",
+            "projectName": "mobile-app",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
