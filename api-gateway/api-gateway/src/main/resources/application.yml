@@ -1,0 +1,21 @@
+# server:
+#   port: 8082 # Gateway port
+
+# spring:
+#   application:
+#     name: api-gateway
+#   cloud:
+#     gateway:
+#       discovery:
+#         locator:
+#           enabled: true # Enable service discovery
+#       routes:
+#         - id: service1-route
+#           uri: lb://service1 # Load-balanced URI
+#           predicates:
+#             - Path=/user-ws/**
+# eureka:
+#   client:
+#     service-url:
+#       defaultZone: http://localhost:8010/eureka # Eureka Server URL
+
