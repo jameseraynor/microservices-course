@@ -26,7 +26,6 @@ public class WebSecurity {
     private UserService userService;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-
     @Autowired
     public WebSecurity(Environment environment, UserService userService, BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.environment = environment;
@@ -40,6 +39,7 @@ public class WebSecurity {
         // Configure authentication manager
         AuthenticationManagerBuilder authenticationManagerBuilder = http
                 .getSharedObject(AuthenticationManagerBuilder.class);
+        authenticationManagerBuilder.userDetailsService(userService).passwordEncoder(bCryptPasswordEncoder);
 
         AuthenticationManager authenticationManager = authenticationManagerBuilder.build();
 
@@ -56,6 +56,7 @@ public class WebSecurity {
                         PathRequest.toH2Console(),
                         AntPathRequestMatcher.antMatcher(HttpMethod.POST, "/users"))
                 .permitAll()
+                .requestMatchers(new AntPathRequestMatcher("/login")).permitAll()
                 // Restrict access to /users/** endpoints to requests from specified gateway IP
                 .requestMatchers(new AntPathRequestMatcher("/users/**")).access(
                         new WebExpressionAuthorizationManager(
@@ -63,7 +64,7 @@ public class WebSecurity {
                 // Require authentication for all other requests
                 .anyRequest().authenticated());
 
-        http.addFilter(new AuthenticationFilter(environment, userService ,authenticationManager));
+        http.addFilter(new AuthenticationFilter(environment, userService, authenticationManager));
 
         http.authenticationManager(authenticationManager);
         // Configure session management to be stateless (no session cookies)
