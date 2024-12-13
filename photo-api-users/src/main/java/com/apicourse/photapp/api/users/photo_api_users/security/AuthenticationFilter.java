@@ -6,7 +6,6 @@ import java.util.Base64;
 import java.util.Date;
 
 import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -25,7 +24,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.SneakyThrows;
 
-import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.core.env.Environment;
 import org.springframework.security.authentication.AuthenticationManager;
 
@@ -56,7 +55,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     @Override
     protected void successfulAuthentication(HttpServletRequest req, HttpServletResponse res, FilterChain chain,
             Authentication auth) {
-        String userName = ((User) auth.getPrincipal()).getName();
+        String userName = ((User) auth.getPrincipal()).getUsername();
         UserDto userDetails = userService.getUserDetailsByEmail(userName);
         String tokenSecret = environment.getProperty("token.secret");
         byte[] tokenSecretBytes = Base64.getEncoder().encode(tokenSecret.getBytes());
