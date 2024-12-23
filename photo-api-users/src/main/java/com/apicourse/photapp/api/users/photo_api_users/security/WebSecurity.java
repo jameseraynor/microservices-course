@@ -21,22 +21,24 @@ import org.springframework.security.authentication.AuthenticationManager;
 
 /**
  * Security configuration class for the application.
- * Handles all security-related configurations including authentication, authorization,
+ * Handles all security-related configurations including authentication,
+ * authorization,
  * and security filter chains.
  */
 @Configuration
 @EnableWebSecurity
 public class WebSecurity {
-    
+
     // Core dependencies required for security configuration
-    private Environment environment;            // For accessing application properties
-    private UserService userService;           // For user-related operations
-    private BCryptPasswordEncoder bCryptPasswordEncoder;  // For password encryption
+    private Environment environment; // For accessing application properties
+    private UserService userService; // For user-related operations
+    private BCryptPasswordEncoder bCryptPasswordEncoder; // For password encryption
 
     /**
      * Constructor to initialize security configuration with required dependencies
-     * @param environment Application environment properties
-     * @param userService Service for user operations
+     * 
+     * @param environment           Application environment properties
+     * @param userService           Service for user operations
      * @param bCryptPasswordEncoder Password encoder instance
      */
     @Autowired
@@ -48,6 +50,7 @@ public class WebSecurity {
 
     /**
      * Configures the security filter chain for HTTP security
+     * 
      * @param http HttpSecurity instance to be configured
      * @return Configured SecurityFilterChain
      * @throws Exception if configuration fails
@@ -56,22 +59,24 @@ public class WebSecurity {
     protected SecurityFilterChain configure(HttpSecurity http) throws Exception {
 
         // Step 1: Configure Authentication Manager
-        // Sets up the authentication manager with user details service and password encoder
+        // Sets up the authentication manager with user details service and password
+        // encoder
         AuthenticationManagerBuilder authenticationManagerBuilder = http
                 .getSharedObject(AuthenticationManagerBuilder.class);
         authenticationManagerBuilder.userDetailsService(userService)
-                                  .passwordEncoder(bCryptPasswordEncoder);
+                .passwordEncoder(bCryptPasswordEncoder);
 
         AuthenticationManager authenticationManager = authenticationManagerBuilder.build();
 
-        AuthenticationFilter authenticationFilter = new AuthenticationFilter(environment, userService, authenticationManager);
+        AuthenticationFilter authenticationFilter = new AuthenticationFilter(environment, userService,
+                authenticationManager);
         authenticationFilter.setFilterProcessesUrl(environment.getProperty("login.url.path"));
 
         // Step 2: Configure CSRF Protection
         // Disable CSRF and configure H2 console access
         http.csrf(csrfConfigurer -> {
-            csrfConfigurer.disable();  // Disable CSRF protection
-            csrfConfigurer.ignoringRequestMatchers(PathRequest.toH2Console());  // Ignore CSRF for H2 console
+            csrfConfigurer.disable(); // Disable CSRF protection
+            csrfConfigurer.ignoringRequestMatchers(PathRequest.toH2Console()); // Ignore CSRF for H2 console
         });
 
         // Step 3: Configure Authorization Rules
@@ -79,15 +84,14 @@ public class WebSecurity {
                 // Allow public access to H2 console and user registration
                 .requestMatchers(
                         PathRequest.toH2Console(),
-                        AntPathRequestMatcher.antMatcher(HttpMethod.POST, "/users"))
+                        AntPathRequestMatcher.antMatcher("/users"))
                 .permitAll()
                 // Allow public access to login endpoint
                 .requestMatchers(new AntPathRequestMatcher("/login")).permitAll()
                 // Restrict access to /users/** endpoints to requests from gateway IP only
                 .requestMatchers(new AntPathRequestMatcher("/users/**")).access(
                         new WebExpressionAuthorizationManager(
-                                "hasIpAddress('" + environment.getProperty("gateway.ip") + "')")
-                )
+                                "hasIpAddress('" + environment.getProperty("gateway.ip") + "')"))
                 // Require authentication for all other requests
                 .anyRequest().authenticated());
 
@@ -100,17 +104,11 @@ public class WebSecurity {
 
         // Step 6: Configure Session Management
         // Set session creation policy to STATELESS for REST API
-        http.sessionManagement((session) -> 
-            session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-        );
+        http.sessionManagement((session) -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
         // Step 7: Configure Frame Options
         // Allow H2 console to be displayed in frames from same origin
-        http.headers((headers) -> 
-            headers.frameOptions((frameOptions) -> 
-                frameOptions.sameOrigin()
-            )
-        );
+        http.headers((headers) -> headers.frameOptions((frameOptions) -> frameOptions.sameOrigin()));
 
         return http.build();
     }
