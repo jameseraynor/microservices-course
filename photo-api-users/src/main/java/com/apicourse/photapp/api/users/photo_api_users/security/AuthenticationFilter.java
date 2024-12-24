@@ -25,6 +25,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.SneakyThrows;
 
 import org.springframework.security.core.userdetails.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.security.authentication.AuthenticationManager;
 
@@ -43,7 +44,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
      * @param userService Service for user-related operations
      * @param authenticationManager Spring Security's authentication manager
      */
-    public AuthenticationFilter(Environment environment, UserService userService,
+     public AuthenticationFilter(Environment environment, UserService userService,
             AuthenticationManager authenticationManager) {
         super(authenticationManager);
         this.environment = environment;
@@ -85,12 +86,16 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
         // Prepare the secret key for JWT signing
         String tokenSecret = environment.getProperty("token.secret");
+        if (tokenSecret == null) {
+            throw new IllegalArgumentException("Token secret cannot be null");
+        }
         byte[] tokenSecretBytes = Base64.getEncoder().encode(tokenSecret.getBytes());
         SecretKey key = Keys.hmacShaKeyFor(tokenSecretBytes);
 
         // Calculate token expiration time
         Instant now = Instant.now();
         Instant expiration = now.plusSeconds(Long.parseLong(environment.getProperty("token.expriration_time")));
+        System.out.println("Expiration time is " + environment.getProperty("token.expriration_time"));
         Date expiryDate = Date.from(expiration);
 
         // Build the JWT token

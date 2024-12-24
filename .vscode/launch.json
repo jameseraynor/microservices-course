@@ -39,6 +39,16 @@
             "projectName": "mobile-app",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PhotoAppConfigServerApplication<photo_app_config_server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.api.course.photoapp.api.photo_app_config_server.PhotoAppConfigServerApplication",
+            "projectName": "photo_app_config_server",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
