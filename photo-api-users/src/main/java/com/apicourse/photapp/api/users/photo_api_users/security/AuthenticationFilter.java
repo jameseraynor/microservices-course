@@ -25,7 +25,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.SneakyThrows;
 
 import org.springframework.security.core.userdetails.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.security.authentication.AuthenticationManager;
 
@@ -86,6 +85,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
         // Prepare the secret key for JWT signing
         String tokenSecret = environment.getProperty("token.secret");
+        System.out.println("AuthenticationFilter Token secret is " + tokenSecret);
         if (tokenSecret == null) {
             throw new IllegalArgumentException("Token secret cannot be null");
         }

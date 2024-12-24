@@ -62,6 +62,7 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
         boolean returnValue = true;
         String subject = null;
         String secretToken = env.getProperty("token.secret");
+        System.out.println("AuthorizationHeaderFilter Secret token: " + secretToken);
         if (secretToken == null) {
             throw new IllegalArgumentException("Secret token cannot be null");
         }

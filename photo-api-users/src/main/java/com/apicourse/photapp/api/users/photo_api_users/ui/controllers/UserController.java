@@ -3,7 +3,6 @@ package com.apicourse.photapp.api.users.photo_api_users.ui.controllers;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +31,7 @@ public class UserController {
 
     @GetMapping("/status/check")
     public String status() {
-        return "Working on port " + environment.getProperty("local.server.port");
+        return "Working on port " + environment.getProperty("local.server.port") + ", with token = " + environment.getProperty("token.secret");
     }
 
     @PostMapping
