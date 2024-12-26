@@ -7,6 +7,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,8 +17,10 @@ import com.apicourse.photapp.api.users.photo_api_users.service.UserService;
 import com.apicourse.photapp.api.users.photo_api_users.shared.UserDto;
 import com.apicourse.photapp.api.users.photo_api_users.ui.model.CreateUserRequestModel;
 import com.apicourse.photapp.api.users.photo_api_users.ui.model.CreateUserResponseModel;
+import com.apicourse.photapp.api.users.photo_api_users.ui.model.UserResponseModel;
 
 import jakarta.validation.Valid;
+
 
 @RestController
 @RequestMapping("/users")
@@ -48,5 +51,14 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
+    @GetMapping(value = "/{userId}", produces = { "application/json", "application/xml" })
+    public ResponseEntity<UserResponseModel> getUser(@PathVariable String userId) {
+
+        UserDto userDto = service.getUserByUserId(userId);
+        UserResponseModel returnValue = new ModelMapper().map(userDto, UserResponseModel.class);
+
+        return ResponseEntity.status(HttpStatus.OK).body(new UserResponseModel());
+    }
+    
 
 }

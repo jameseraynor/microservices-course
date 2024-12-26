@@ -5,16 +5,25 @@ import java.util.UUID;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.core.env.Environment;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import com.apicourse.photapp.api.users.photo_api_users.data.UserEntity;
 import com.apicourse.photapp.api.users.photo_api_users.data.UsersRepository;
 import com.apicourse.photapp.api.users.photo_api_users.shared.UserDto;
+import com.apicourse.photapp.api.users.photo_api_users.ui.model.AlbumResponseModel;
+import com.rabbitmq.client.RpcClient.Response;
+
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -23,10 +32,17 @@ public class UserServiceImpl implements UserService {
 
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    private RestTemplate restTemplate;
+
+    private Environment environment;
+
     @Autowired
-    public UserServiceImpl(UsersRepository usersRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
+    public UserServiceImpl(UsersRepository usersRepository, BCryptPasswordEncoder bCryptPasswordEncoder,
+            RestTemplate restTemplate, Environment environment) {
         this.usersRepository = usersRepository;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+        this.restTemplate = restTemplate;
+        this.environment = environment;
     }
 
     @Override
@@ -66,6 +82,28 @@ public class UserServiceImpl implements UserService {
             throw new UsernameNotFoundException(email);
 
         return new ModelMapper().map(entity, UserDto.class);
+    }
+
+    @Override
+    public UserDto getUserByUserId(String userId) {
+
+        UserEntity entity = usersRepository.findByUserId(userId);
+
+        if (entity == null)
+            throw new UsernameNotFoundException("User not found");
+
+        String albumsUrl = String.format(environment.getProperty("albums.url") , userId);
+
+        ResponseEntity<List<AlbumResponseModel>> albumsList = restTemplate.exchange(
+                albumsUrl, HttpMethod.GET, null,
+                new ParameterizedTypeReference<List<AlbumResponseModel>>() {
+                });
+        List<AlbumResponseModel> albums = albumsList.getBody();
+
+        UserDto dto = new ModelMapper().map(entity, UserDto.class);
+        dto.setAlbums(albums);
+
+        return dto;
     }
 
 }

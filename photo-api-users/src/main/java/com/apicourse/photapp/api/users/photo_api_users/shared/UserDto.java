@@ -1,6 +1,9 @@
 package com.apicourse.photapp.api.users.photo_api_users.shared;
 
 import java.io.Serializable;
+import java.util.List;
+
+import com.apicourse.photapp.api.users.photo_api_users.ui.model.AlbumResponseModel;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,5 +26,6 @@ public class UserDto implements Serializable{
     private String password;
     private String encryptedPassword;
     private String userId;
+    private List<AlbumResponseModel> albums;
 
 }
