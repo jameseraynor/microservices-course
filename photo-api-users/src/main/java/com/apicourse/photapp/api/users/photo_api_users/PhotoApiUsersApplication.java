@@ -5,9 +5,11 @@ import org.springframework.boot.actuate.web.exchanges.HttpExchangeRepository;
 import org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -32,5 +34,12 @@ public class PhotoApiUsersApplication {
         return new InMemoryHttpExchangeRepository();
     }
 
+    @Bean
+    @LoadBalanced
+    RestTemplate restTemplate() {
+        // Creates a bean for making RESTful API calls
+        // This bean will be used to make RESTful API calls to other services
+        return new RestTemplate();
+    }
 
 }

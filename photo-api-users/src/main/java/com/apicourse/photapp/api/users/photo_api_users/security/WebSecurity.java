@@ -88,10 +88,11 @@ public class WebSecurity {
                 // Allow public access to login endpoint
                 .requestMatchers(new AntPathRequestMatcher("/login")).permitAll()
                 .requestMatchers(new AntPathRequestMatcher("/actuator/**")).permitAll()
+                .requestMatchers(new AntPathRequestMatcher("/users/**")).permitAll()
                 // Restrict access to /users/** endpoints to requests from gateway IP only
-                .requestMatchers(new AntPathRequestMatcher("/users/**")).access(
-                        new WebExpressionAuthorizationManager(
-                                "hasIpAddress('" + environment.getProperty("gateway.ip") + "')"))
+                // .requestMatchers(new AntPathRequestMatcher("/users/**")).access(
+                //         new WebExpressionAuthorizationManager(
+                //                 "hasIpAddress('" + environment.getProperty("gateway.ip") + "')"))
                 // Require authentication for all other requests
                 .anyRequest().authenticated());
 

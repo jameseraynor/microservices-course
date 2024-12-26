@@ -34,4 +34,5 @@ public class UserEntity implements Serializable{
     private String encryptedPassword;
     @Column(nullable = false, unique = true)
     private String userId;
+    
 }

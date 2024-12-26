@@ -8,7 +8,8 @@
             "mainClass": "com.apicourse.photoapp.discovery.photo_discovery_service.PhotoDiscoveryServiceApplication",
             "projectName": "photo-discovery-service",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=62225 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=photo-discovery-service"
         },
         {
             "type": "java",
@@ -47,6 +48,16 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.api.course.photoapp.api.photo_app_config_server.PhotoAppConfigServerApplication",
             "projectName": "photo_app_config_server",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PhotoAppApiAlbumsApplication<PhotoAppApiAlbums>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.appsdeveloperblog.photoapp.api.albums.PhotoAppApiAlbumsApplication",
+            "projectName": "PhotoAppApiAlbums",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
