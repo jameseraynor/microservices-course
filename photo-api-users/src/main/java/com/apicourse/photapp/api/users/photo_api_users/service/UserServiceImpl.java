@@ -20,7 +20,6 @@ import com.apicourse.photapp.api.users.photo_api_users.data.UserEntity;
 import com.apicourse.photapp.api.users.photo_api_users.data.UsersRepository;
 import com.apicourse.photapp.api.users.photo_api_users.shared.UserDto;
 import com.apicourse.photapp.api.users.photo_api_users.ui.model.AlbumResponseModel;
-import com.rabbitmq.client.RpcClient.Response;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,6 +91,9 @@ public class UserServiceImpl implements UserService {
         if (entity == null)
             throw new UsernameNotFoundException("User not found");
 
+        System.out.println("in api users "+entity.toString());
+        
+        UserDto dto = new ModelMapper().map(entity, UserDto.class);
         String albumsUrl = String.format(environment.getProperty("albums.url") , userId);
 
         ResponseEntity<List<AlbumResponseModel>> albumsList = restTemplate.exchange(
@@ -100,7 +102,6 @@ public class UserServiceImpl implements UserService {
                 });
         List<AlbumResponseModel> albums = albumsList.getBody();
 
-        UserDto dto = new ModelMapper().map(entity, UserDto.class);
         dto.setAlbums(albums);
 
         return dto;
