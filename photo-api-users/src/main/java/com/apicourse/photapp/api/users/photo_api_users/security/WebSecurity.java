@@ -87,6 +87,7 @@ public class WebSecurity {
                 .permitAll()
                 // Allow public access to login endpoint
                 .requestMatchers(new AntPathRequestMatcher("/login")).permitAll()
+                .requestMatchers(new AntPathRequestMatcher("/actuator/**")).permitAll()
                 // Restrict access to /users/** endpoints to requests from gateway IP only
                 .requestMatchers(new AntPathRequestMatcher("/users/**")).access(
                         new WebExpressionAuthorizationManager(

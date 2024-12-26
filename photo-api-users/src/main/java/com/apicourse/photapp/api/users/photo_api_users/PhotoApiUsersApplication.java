@@ -1,6 +1,8 @@
 package com.apicourse.photapp.api.users.photo_api_users;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.actuate.web.exchanges.HttpExchangeRepository;
+import org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -17,10 +19,17 @@ public class PhotoApiUsersApplication {
 	}
 
 	@Bean
-    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+    BCryptPasswordEncoder bCryptPasswordEncoder() {
         // Creates a bean for password encryption using BCrypt hashing algorithm
         // This encoder will be used for securely hashing user passwords before storage
         return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    HttpExchangeRepository httpExchangeRepository() {
+        // Creates a bean for storing HttpExchange objects
+        // This repository will be used to store HttpExchange objects for later retrieval
+        return new InMemoryHttpExchangeRepository();
     }
 
 
