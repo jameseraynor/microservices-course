@@ -57,7 +57,7 @@ public class UserController {
         UserDto userDto = service.getUserByUserId(userId);
         UserResponseModel returnValue = new ModelMapper().map(userDto, UserResponseModel.class);
 
-        return ResponseEntity.status(HttpStatus.OK).body(new UserResponseModel());
+        return ResponseEntity.status(HttpStatus.OK).body(returnValue);
     }
     
 

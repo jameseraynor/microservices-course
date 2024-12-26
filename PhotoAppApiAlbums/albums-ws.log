@@ -1,0 +1,348 @@
+2024-12-26T14:48:25.000-06:00  INFO 6914 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 21.0.5 with PID 6914 (/Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums/target/classes started by javierjaramillo in /Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums)
+2024-12-26T14:48:25.003-06:00  INFO 6914 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-26T14:48:25.073-06:00  INFO 6914 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7688154d-c0ef-35c0-9a5e-3057583ef5d5
+2024-12-26T14:48:25.086-06:00  INFO 6914 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-12-26T14:48:25.086-06:00  INFO 6914 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-26T14:48:25.086-06:00  INFO 6914 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-12-26T14:48:25.094-06:00  INFO 6914 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-26T14:48:25.094-06:00  INFO 6914 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 90 ms
+2024-12-26T14:48:25.143-06:00  INFO 6914 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-26T14:48:25.146-06:00  INFO 6914 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-26T14:48:25.149-06:00  WARN 6914 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-26T14:48:25.150-06:00  INFO 6914 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-12-26T14:48:25.157-06:00  INFO 6914 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 60173 (http) with context path ''
+2024-12-26T14:48:25.157-06:00  INFO 6914 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 60173
+2024-12-26T14:48:25.157-06:00  INFO 6914 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-12-26T14:48:25.158-06:00  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-12-26T14:48:25.158-06:00  INFO 6914 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-26T14:48:25.158-06:00  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-26T14:48:25.158-06:00  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-26T14:48:25.159-06:00  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-26T14:48:25.159-06:00  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-26T14:48:25.159-06:00  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-26T14:48:25.159-06:00  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-12-26T14:48:25.159-06:00  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-26T14:48:25.172-06:00  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-26T14:48:25.172-06:00  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-12-26T14:48:25.173-06:00  INFO 6914 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-12-26T14:48:25.173-06:00  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1735246105173 with initial instances count: 3
+2024-12-26T14:48:25.173-06:00  INFO 6914 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2024-12-26T14:48:25.174-06:00  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1735246105174, current=UP, previous=STARTING]
+2024-12-26T14:48:25.174-06:00  INFO 6914 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:1cdf3c46406f44ae4449d2bc67840d62: registering service...
+2024-12-26T14:48:25.178-06:00  INFO 6914 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 0.194 seconds (process running for 716.49)
+2024-12-26T14:48:25.179-06:00  INFO 6914 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:1cdf3c46406f44ae4449d2bc67840d62 - registration status: 204
+2024-12-26T14:48:25.180-06:00  INFO 6914 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   LogFileWebEndpointAutoConfiguration#logFileWebEndpoint matched:
+      - Log File found logging.file.name albums-ws.log (LogFileWebEndpointAutoConfiguration.LogFileCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.logging.LogFileWebEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2024-12-26T14:49:49.243-06:00  INFO 6914 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-26T14:49:49.244-06:00  INFO 6914 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-26T14:49:49.244-06:00  INFO 6914 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-26T14:49:49.313-06:00  WARN 6914 --- [RMI TCP Connection(2)-127.0.0.1] javax.management.remote.misc             : The server has decided to close this client connection.
+2024-12-26T14:50:42.854-06:00  INFO 23743 --- [albums-ws] [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 21.0.5 with PID 23743 (/Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums/target/classes started by javierjaramillo in /Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums)
+2024-12-26T14:50:42.856-06:00  INFO 23743 --- [albums-ws] [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-26T14:50:42.880-06:00  INFO 23743 --- [albums-ws] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-26T14:50:42.880-06:00  INFO 23743 --- [albums-ws] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-26T14:50:43.256-06:00  INFO 23743 --- [albums-ws] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=53e9796f-b36d-34a1-8415-43f4cde2466c
+2024-12-26T14:50:43.432-06:00  INFO 23743 --- [albums-ws] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-12-26T14:50:43.437-06:00  INFO 23743 --- [albums-ws] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-26T14:50:43.437-06:00  INFO 23743 --- [albums-ws] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-26T14:50:43.453-06:00  INFO 23743 --- [albums-ws] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-26T14:50:43.454-06:00  INFO 23743 --- [albums-ws] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 573 ms
+2024-12-26T14:50:43.774-06:00  INFO 23743 --- [albums-ws] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-26T14:50:43.786-06:00  INFO 23743 --- [albums-ws] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-26T14:50:43.799-06:00  WARN 23743 --- [albums-ws] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'compositeCompatibilityVerifier' defined in class path resource [org/springframework/cloud/configuration/CompatibilityVerifierAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.configuration.CompositeCompatibilityVerifier]: Factory method 'compositeCompatibilityVerifier' threw exception with message: Spring Cloud/ Spring Boot version compatibility checks have failed: [[VerificationResult@6001f6cc description = 'Spring Boot [3.4.1] is not compatible with this Spring Cloud release train', action = 'Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]']]
+2024-12-26T14:50:43.803-06:00  INFO 23743 --- [albums-ws] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-26T14:50:43.820-06:00  INFO 23743 --- [albums-ws] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-26T14:50:43.830-06:00 ERROR 23743 --- [albums-ws] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Your project setup is incompatible with our requirements due to following reasons:
+
+- Spring Boot [3.4.1] is not compatible with this Spring Cloud release train
+
+
+Action:
+
+Consider applying the following actions:
+
+- Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]
+
+
+2024-12-26T14:51:29.475-06:00  INFO 24572 --- [albums-ws] [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 21.0.5 with PID 24572 (/Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums/target/classes started by javierjaramillo in /Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums)
+2024-12-26T14:51:29.476-06:00  INFO 24572 --- [albums-ws] [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-26T14:51:29.491-06:00  INFO 24572 --- [albums-ws] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-26T14:51:29.491-06:00  INFO 24572 --- [albums-ws] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-26T14:51:29.837-06:00  INFO 24572 --- [albums-ws] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=53e9796f-b36d-34a1-8415-43f4cde2466c
+2024-12-26T14:51:29.989-06:00  INFO 24572 --- [albums-ws] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-12-26T14:51:29.994-06:00  INFO 24572 --- [albums-ws] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-26T14:51:29.994-06:00  INFO 24572 --- [albums-ws] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-26T14:51:30.010-06:00  INFO 24572 --- [albums-ws] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-26T14:51:30.010-06:00  INFO 24572 --- [albums-ws] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 519 ms
+2024-12-26T14:51:30.297-06:00  WARN 24572 --- [albums-ws] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-12-26T14:51:30.303-06:00  INFO 24572 --- [albums-ws] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-26T14:51:30.313-06:00  WARN 24572 --- [albums-ws] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'compositeCompatibilityVerifier' defined in class path resource [org/springframework/cloud/configuration/CompatibilityVerifierAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.configuration.CompositeCompatibilityVerifier]: Factory method 'compositeCompatibilityVerifier' threw exception with message: Spring Cloud/ Spring Boot version compatibility checks have failed: [[VerificationResult@5cb3c3ad description = 'Spring Boot [3.4.1] is not compatible with this Spring Cloud release train', action = 'Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]']]
+2024-12-26T14:51:30.316-06:00  INFO 24572 --- [albums-ws] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-26T14:51:30.329-06:00  INFO 24572 --- [albums-ws] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-26T14:51:30.337-06:00 ERROR 24572 --- [albums-ws] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Your project setup is incompatible with our requirements due to following reasons:
+
+- Spring Boot [3.4.1] is not compatible with this Spring Cloud release train
+
+
+Action:
+
+Consider applying the following actions:
+
+- Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]
+
+
+2024-12-26T14:53:48.531-06:00  INFO 27058 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 21.0.5 with PID 27058 (/Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums/target/classes started by javierjaramillo in /Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums)
+2024-12-26T14:53:48.532-06:00  INFO 27058 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-26T14:53:48.547-06:00  INFO 27058 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-26T14:53:48.547-06:00  INFO 27058 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-26T14:53:48.885-06:00  INFO 27058 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7688154d-c0ef-35c0-9a5e-3057583ef5d5
+2024-12-26T14:53:49.069-06:00  INFO 27058 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-12-26T14:53:49.073-06:00  INFO 27058 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-26T14:53:49.073-06:00  INFO 27058 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-12-26T14:53:49.098-06:00  INFO 27058 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-26T14:53:49.098-06:00  INFO 27058 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 551 ms
+2024-12-26T14:53:49.377-06:00  WARN 27058 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-12-26T14:53:49.383-06:00  INFO 27058 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-26T14:53:49.396-06:00  WARN 27058 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-26T14:53:49.399-06:00  INFO 27058 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-12-26T14:53:49.428-06:00  INFO 27058 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 62048 (http) with context path ''
+2024-12-26T14:53:49.428-06:00  INFO 27058 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 62048
+2024-12-26T14:53:49.430-06:00  INFO 27058 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-12-26T14:53:49.439-06:00  INFO 27058 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-12-26T14:53:49.442-06:00  INFO 27058 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-26T14:53:49.449-06:00  INFO 27058 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-26T14:53:49.449-06:00  INFO 27058 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-26T14:53:49.449-06:00  INFO 27058 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-26T14:53:49.449-06:00  INFO 27058 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-26T14:53:49.449-06:00  INFO 27058 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-26T14:53:49.449-06:00  INFO 27058 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-12-26T14:53:49.449-06:00  INFO 27058 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-26T14:53:49.565-06:00  INFO 27058 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-26T14:53:49.566-06:00  INFO 27058 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-12-26T14:53:49.567-06:00  INFO 27058 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-12-26T14:53:49.569-06:00  INFO 27058 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1735246429568 with initial instances count: 2
+2024-12-26T14:53:49.570-06:00  INFO 27058 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2024-12-26T14:53:49.570-06:00  INFO 27058 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1735246429570, current=UP, previous=STARTING]
+2024-12-26T14:53:49.570-06:00  INFO 27058 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:97df5b08dcc204476d024f70252e2c88: registering service...
+2024-12-26T14:53:49.583-06:00  INFO 27058 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 1.209 seconds (process running for 1.52)
+2024-12-26T14:53:49.585-06:00  INFO 27058 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:97df5b08dcc204476d024f70252e2c88 - registration status: 204
+2024-12-26T14:53:51.724-06:00  INFO 27058 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-26T14:53:51.724-06:00  INFO 27058 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-26T14:53:51.725-06:00  INFO 27058 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-26T14:55:09.780-06:00  INFO 27058 --- [http-nio-auto-1-exec-2] c.a.p.a.a.i.c.AlbumsController           : Returning 2 albums
+2024-12-26T14:57:12.661-06:00  INFO 27058 --- [http-nio-auto-1-exec-3] c.a.p.a.a.i.c.AlbumsController           : Returning 2 albums
+2024-12-26T14:58:10.783-06:00  INFO 27058 --- [http-nio-auto-1-exec-4] c.a.p.a.a.i.c.AlbumsController           : Returning 2 albums
+2024-12-26T14:58:49.456-06:00  INFO 27058 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-26T16:18:48.010-06:00  INFO 48171 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 21.0.5 with PID 48171 (/Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums/target/classes started by javierjaramillo in /Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums)
+2024-12-26T16:18:48.011-06:00  INFO 48171 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-26T16:18:48.035-06:00  INFO 48171 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-26T16:18:48.036-06:00  INFO 48171 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-26T16:18:48.423-06:00  INFO 48171 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7688154d-c0ef-35c0-9a5e-3057583ef5d5
+2024-12-26T16:18:48.610-06:00  INFO 48171 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-12-26T16:18:48.613-06:00  INFO 48171 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-26T16:18:48.613-06:00  INFO 48171 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-12-26T16:18:48.633-06:00  INFO 48171 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-26T16:18:48.633-06:00  INFO 48171 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 597 ms
+2024-12-26T16:18:48.973-06:00  INFO 48171 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-26T16:18:48.980-06:00  INFO 48171 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-26T16:18:48.995-06:00  WARN 48171 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-26T16:18:49.012-06:00  INFO 48171 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-12-26T16:18:49.068-06:00  INFO 48171 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 56294 (http) with context path ''
+2024-12-26T16:18:49.070-06:00  INFO 48171 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 56294
+2024-12-26T16:18:49.074-06:00  INFO 48171 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-12-26T16:18:49.092-06:00  INFO 48171 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-12-26T16:18:49.094-06:00  INFO 48171 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-26T16:18:49.105-06:00  INFO 48171 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-26T16:18:49.106-06:00  INFO 48171 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-26T16:18:49.106-06:00  INFO 48171 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-26T16:18:49.106-06:00  INFO 48171 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-26T16:18:49.106-06:00  INFO 48171 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-26T16:18:49.106-06:00  INFO 48171 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-12-26T16:18:49.106-06:00  INFO 48171 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-26T16:18:49.338-06:00  INFO 48171 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-26T16:18:49.339-06:00  INFO 48171 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-12-26T16:18:49.340-06:00  INFO 48171 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-12-26T16:18:49.342-06:00  INFO 48171 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1735251529342 with initial instances count: 0
+2024-12-26T16:18:49.343-06:00  INFO 48171 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2024-12-26T16:18:49.344-06:00  INFO 48171 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1735251529344, current=UP, previous=STARTING]
+2024-12-26T16:18:49.345-06:00  INFO 48171 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:c67ed708fa13c7734b7882e7094d5dea: registering service...
+2024-12-26T16:18:49.359-06:00  INFO 48171 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 1.526 seconds (process running for 1.865)
+2024-12-26T16:18:49.407-06:00  INFO 48171 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:c67ed708fa13c7734b7882e7094d5dea - registration status: 204
+2024-12-26T16:18:51.190-06:00  INFO 48171 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-26T16:18:51.191-06:00  INFO 48171 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-26T16:18:51.191-06:00  INFO 48171 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-26T16:19:19.348-06:00  INFO 48171 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-26T16:19:19.350-06:00  INFO 48171 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-26T16:19:19.350-06:00  INFO 48171 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-26T16:19:19.350-06:00  INFO 48171 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-26T16:19:19.350-06:00  INFO 48171 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-26T16:19:19.350-06:00  INFO 48171 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2024-12-26T16:19:19.351-06:00  INFO 48171 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-26T16:19:19.367-06:00  INFO 48171 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-26T16:20:23.424-06:00  INFO 48171 --- [http-nio-auto-1-exec-1] c.a.p.a.a.i.c.AlbumsController           : Returning 2 albums
+2024-12-26T16:22:32.666-06:00  INFO 48171 --- [http-nio-auto-1-exec-3] c.a.p.a.a.i.c.AlbumsController           : Returning 2 albums
+2024-12-26T16:23:24.293-06:00  INFO 48171 --- [http-nio-auto-1-exec-4] c.a.p.a.a.i.c.AlbumsController           : Returning 2 albums
+2024-12-26T16:23:49.123-06:00  INFO 48171 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-26T16:28:47.041-06:00  INFO 59019 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 21.0.5 with PID 59019 (/Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums/target/classes started by javierjaramillo in /Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums)
+2024-12-26T16:28:47.044-06:00  INFO 59019 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-26T16:28:47.076-06:00  INFO 59019 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-26T16:28:47.076-06:00  INFO 59019 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-26T16:28:47.789-06:00  INFO 59019 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7688154d-c0ef-35c0-9a5e-3057583ef5d5
+2024-12-26T16:28:48.134-06:00  INFO 59019 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-12-26T16:28:48.141-06:00  INFO 59019 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-26T16:28:48.141-06:00  INFO 59019 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-12-26T16:28:48.176-06:00  INFO 59019 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-26T16:28:48.176-06:00  INFO 59019 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1100 ms
+2024-12-26T16:28:48.583-06:00  INFO 59019 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-26T16:28:48.591-06:00  INFO 59019 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-26T16:28:48.610-06:00  WARN 59019 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-26T16:28:48.613-06:00  INFO 59019 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-12-26T16:28:48.658-06:00  INFO 59019 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59555 (http) with context path ''
+2024-12-26T16:28:48.659-06:00  INFO 59019 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 59555
+2024-12-26T16:28:48.661-06:00  INFO 59019 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-12-26T16:28:48.673-06:00  INFO 59019 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-12-26T16:28:48.675-06:00  INFO 59019 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-26T16:28:48.683-06:00  INFO 59019 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-26T16:28:48.684-06:00  INFO 59019 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-26T16:28:48.684-06:00  INFO 59019 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-26T16:28:48.684-06:00  INFO 59019 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-26T16:28:48.684-06:00  INFO 59019 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-26T16:28:48.684-06:00  INFO 59019 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-12-26T16:28:48.684-06:00  INFO 59019 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-26T16:28:48.820-06:00  INFO 59019 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-26T16:28:48.821-06:00  INFO 59019 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-12-26T16:28:48.822-06:00  INFO 59019 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-12-26T16:28:48.824-06:00  INFO 59019 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1735252128824 with initial instances count: 0
+2024-12-26T16:28:48.825-06:00  INFO 59019 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2024-12-26T16:28:48.825-06:00  INFO 59019 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1735252128825, current=UP, previous=STARTING]
+2024-12-26T16:28:48.826-06:00  INFO 59019 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:2d75d072af03cf4cd664167af4fba8ee: registering service...
+2024-12-26T16:28:48.841-06:00  INFO 59019 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 1.983 seconds (process running for 2.356)
+2024-12-26T16:28:48.850-06:00  INFO 59019 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:2d75d072af03cf4cd664167af4fba8ee - registration status: 204
+2024-12-26T16:28:50.156-06:00  INFO 59019 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-26T16:28:50.157-06:00  INFO 59019 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-26T16:28:50.158-06:00  INFO 59019 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-26T16:29:18.828-06:00  INFO 59019 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-26T16:29:18.830-06:00  INFO 59019 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-26T16:29:18.830-06:00  INFO 59019 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-26T16:29:18.831-06:00  INFO 59019 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-26T16:29:18.831-06:00  INFO 59019 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-26T16:29:18.831-06:00  INFO 59019 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2024-12-26T16:29:18.831-06:00  INFO 59019 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-26T16:29:18.858-06:00  INFO 59019 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-26T16:31:25.011-06:00  INFO 59019 --- [http-nio-auto-1-exec-1] c.a.p.a.a.i.c.AlbumsController           : Returning 2 albums
+2024-12-26T16:33:46.383-06:00  INFO 64792 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 21.0.5 with PID 64792 (/Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums/target/classes started by javierjaramillo in /Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums)
+2024-12-26T16:33:46.385-06:00  INFO 64792 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-26T16:33:46.409-06:00  INFO 64792 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-26T16:33:46.409-06:00  INFO 64792 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-26T16:33:46.812-06:00  INFO 64792 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7688154d-c0ef-35c0-9a5e-3057583ef5d5
+2024-12-26T16:33:47.008-06:00  INFO 64792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-12-26T16:33:47.011-06:00  INFO 64792 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-26T16:33:47.012-06:00  INFO 64792 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-12-26T16:33:47.035-06:00  INFO 64792 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-26T16:33:47.036-06:00  INFO 64792 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 627 ms
+2024-12-26T16:33:47.359-06:00  INFO 64792 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-26T16:33:47.365-06:00  INFO 64792 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-26T16:33:47.383-06:00  WARN 64792 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-26T16:33:47.387-06:00  INFO 64792 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-12-26T16:33:47.435-06:00  INFO 64792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 61106 (http) with context path ''
+2024-12-26T16:33:47.436-06:00  INFO 64792 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 61106
+2024-12-26T16:33:47.439-06:00  INFO 64792 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-12-26T16:33:47.456-06:00  INFO 64792 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-12-26T16:33:47.460-06:00  INFO 64792 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-26T16:33:47.473-06:00  INFO 64792 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-26T16:33:47.473-06:00  INFO 64792 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-26T16:33:47.473-06:00  INFO 64792 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-26T16:33:47.473-06:00  INFO 64792 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-26T16:33:47.474-06:00  INFO 64792 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-26T16:33:47.474-06:00  INFO 64792 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-12-26T16:33:47.474-06:00  INFO 64792 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-26T16:33:47.705-06:00  INFO 64792 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-26T16:33:47.706-06:00  INFO 64792 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-12-26T16:33:47.707-06:00  INFO 64792 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-12-26T16:33:47.710-06:00  INFO 64792 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1735252427709 with initial instances count: 0
+2024-12-26T16:33:47.711-06:00  INFO 64792 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2024-12-26T16:33:47.711-06:00  INFO 64792 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1735252427711, current=UP, previous=STARTING]
+2024-12-26T16:33:47.712-06:00  INFO 64792 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:db082639dab4fe1db7727c8351dd2315: registering service...
+2024-12-26T16:33:47.725-06:00  INFO 64792 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 1.479 seconds (process running for 1.806)
+2024-12-26T16:33:47.783-06:00  INFO 64792 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:db082639dab4fe1db7727c8351dd2315 - registration status: 204
+2024-12-26T16:33:49.583-06:00  INFO 64792 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-26T16:33:49.584-06:00  INFO 64792 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-26T16:33:49.584-06:00  INFO 64792 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-26T16:34:17.713-06:00  INFO 64792 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-26T16:34:17.715-06:00  INFO 64792 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-26T16:34:17.715-06:00  INFO 64792 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-26T16:34:17.715-06:00  INFO 64792 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-26T16:34:17.715-06:00  INFO 64792 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-26T16:34:17.715-06:00  INFO 64792 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2024-12-26T16:34:17.715-06:00  INFO 64792 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-26T16:34:17.735-06:00  INFO 64792 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-26T16:34:38.032-06:00  INFO 64792 --- [http-nio-auto-1-exec-1] c.a.p.a.a.i.c.AlbumsController           : Returning 2 albums
+2024-12-26T16:38:47.450-06:00  INFO 64792 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-26T16:43:47.554-06:00  INFO 64792 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-26T16:48:47.620-06:00  INFO 64792 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-26T16:53:47.684-06:00  INFO 64792 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
