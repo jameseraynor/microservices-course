@@ -4,7 +4,11 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Parent Configuration: Defines Spring Boot as the parent project -->
+    <!-- 
+    Parent Configuration
+    - Inherits defaults and dependencies from Spring Boot
+    - Provides dependency management and plugin configurations
+    -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -12,23 +16,38 @@
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
 
-    <!-- Basic Project Information -->
+    <!-- 
+    Project Coordinates
+    - Uniquely identifies this project in Maven repository
+    - Follows naming convention: com.[company].[project].[module]
+    -->
     <groupId>com.apicourse.photapp.api.users</groupId>
     <artifactId>photo-api-users</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>photo-api-users</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Users microservice for photo application</description>
 
-    <!-- Project Properties -->
+    <!-- 
+    Project Properties
+    - Defines version numbers and configuration values
+    - Used throughout the POM file using ${property.name}
+    -->
     <properties>
         <java.version>21</java.version>
         <spring-cloud.version>2024.0.0</spring-cloud.version>
     </properties>
 
-    <!-- Dependencies -->
+    <!-- 
+    Dependencies Section
+    - All project dependencies are organized by category
+    - Each dependency specifies groupId, artifactId, and version (if needed)
+    -->
     <dependencies>
-        <!-- Spring Boot Core Dependencies -->
-        <!-- Web, Security, and Data -->
+        <!-- 
+        Core Spring Boot Dependencies
+        - Essential components for building web applications
+        - Security, data access, and validation
+        -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -45,9 +64,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
 
-        <!-- Spring Cloud Dependencies -->
-        <!-- Service Discovery, Config, and Circuit Breaker -->
+        <!-- 
+        Spring Cloud Dependencies
+        - Microservices infrastructure components
+        - Service discovery, configuration, and resilience patterns
+        -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -68,18 +94,30 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+
+        <!-- 
+        Resilience and Circuit Breaker
+        - Fault tolerance and resilience patterns
+        -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
+            <groupId>io.github.resilience4j</groupId>
+            <artifactId>resilience4j-spring-boot2</artifactId>
+            <version>2.2.0</version>
         </dependency>
 
-        <!-- Monitoring and Management -->
+        <!-- 
+        Monitoring and Management
+        - Application metrics and health monitoring
+        -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-        <!-- Database Drivers -->
+        <!-- 
+        Database Drivers
+        - Supports both H2 (development) and MySQL (production)
+        -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -91,7 +129,10 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Development Tools -->
+        <!-- 
+        Development Tools
+        - Utilities to enhance development experience
+        -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -104,8 +145,10 @@
             <scope>annotationProcessor</scope>
         </dependency>
 
-        <!-- Utility Libraries -->
-        <!-- Object Mapping, XML Support, and JWT -->
+        <!-- 
+        Utility Libraries
+        - Object mapping and data format support
+        -->
         <dependency>
             <groupId>org.modelmapper</groupId>
             <artifactId>modelmapper</artifactId>
@@ -116,7 +159,10 @@
             <artifactId>jackson-dataformat-xml</artifactId>
         </dependency>
 
-        <!-- JWT Dependencies -->
+        <!-- 
+        JWT Security
+        - JSON Web Token implementation for authentication
+        -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
@@ -135,7 +181,10 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Testing Dependencies -->
+        <!-- 
+        Testing Dependencies
+        - Unit and integration testing support
+        -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -148,7 +197,11 @@
         </dependency>
     </dependencies>
 
-    <!-- Spring Cloud Dependency Management -->
+    <!-- 
+    Dependency Management
+    - Controls versions of Spring Cloud dependencies
+    - Ensures compatibility between components
+    -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -161,12 +214,24 @@
         </dependencies>
     </dependencyManagement>
 
-    <!-- Build Configuration -->
+    <!-- 
+    Build Configuration
+    - Configures the build process and plugins
+    - Includes Spring Boot Maven plugin for creating executable jar
+    -->
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
             </plugin>
         </plugins>
     </build>
