@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Spring Boot Parent Configuration -->
+    <!-- Parent Configuration: Defines Spring Boot as the parent project -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -12,29 +12,14 @@
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
 
-    <!-- Project Information -->
+    <!-- Basic Project Information -->
     <groupId>com.apicourse.photapp.api.users</groupId>
     <artifactId>photo-api-users</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>photo-api-users</name>
     <description>Demo project for Spring Boot</description>
 
-    <!-- Project Metadata -->
-    <url />
-    <licenses>
-        <license />
-    </licenses>
-    <developers>
-        <developer />
-    </developers>
-    <scm>
-        <connection />
-        <developerConnection />
-        <tag />
-        <url />
-    </scm>
-
-    <!-- Properties -->
+    <!-- Project Properties -->
     <properties>
         <java.version>21</java.version>
         <spring-cloud.version>2024.0.0</spring-cloud.version>
@@ -43,13 +28,14 @@
     <!-- Dependencies -->
     <dependencies>
         <!-- Spring Boot Core Dependencies -->
+        <!-- Web, Security, and Data -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -57,7 +43,14 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- Spring Cloud Dependencies -->
+        <!-- Service Discovery, Config, and Circuit Breaker -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -72,22 +65,30 @@
             <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
         </dependency>
 
-        <!-- Spring Cloud Dependencies -->
+        <!-- Monitoring and Management -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- Database Drivers -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
         <!-- Development Tools -->
@@ -103,19 +104,8 @@
             <scope>annotationProcessor</scope>
         </dependency>
 
-        <!-- Database -->
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-
         <!-- Utility Libraries -->
+        <!-- Object Mapping, XML Support, and JWT -->
         <dependency>
             <groupId>org.modelmapper</groupId>
             <artifactId>modelmapper</artifactId>
@@ -125,6 +115,8 @@
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-xml</artifactId>
         </dependency>
+
+        <!-- JWT Dependencies -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
@@ -143,7 +135,6 @@
             <scope>runtime</scope>
         </dependency>
 
-
         <!-- Testing Dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -157,7 +148,7 @@
         </dependency>
     </dependencies>
 
-    <!-- Dependency Management -->
+    <!-- Spring Cloud Dependency Management -->
     <dependencyManagement>
         <dependencies>
             <dependency>
