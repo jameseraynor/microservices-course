@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.apicourse.photapp.api.users.photo_api_users.ui.model.AlbumResponseModel;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 
 @FeignClient(name = "albums-ws")
 public interface AlbumServiceClient {
 
     @GetMapping("/users/{userId}/albums")
+    @Retry(name = "albums-ws")
     @CircuitBreaker(name = "albums-ws", fallbackMethod = "getAlbumsFallback")
     public List<AlbumResponseModel> getAlbums(@PathVariable String userId);
 
