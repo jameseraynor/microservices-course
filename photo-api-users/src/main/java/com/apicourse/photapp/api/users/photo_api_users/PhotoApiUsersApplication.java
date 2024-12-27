@@ -7,13 +7,19 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.client.RestTemplate;
 
+import com.apicourse.photapp.api.users.photo_api_users.shared.FeignErrorDecoder;
+
+import feign.Logger;
+
 @SpringBootApplication
 @EnableDiscoveryClient
 @RefreshScope
+@EnableFeignClients
 public class PhotoApiUsersApplication {
 
 	public static void main(String[] args) {
@@ -42,4 +48,17 @@ public class PhotoApiUsersApplication {
         return new RestTemplate();
     }
 
+    @Bean
+    Logger.Level feignLoggerLevel() {
+        // Creates a bean for setting the log level of Feign client
+        // This bean will be used to set the log level of Feign client to FULL
+        return Logger.Level.FULL;
+    }
+
+    @Bean
+    public FeignErrorDecoder errorDecoder() {
+        // Creates a bean for decoding Feign client errors
+        // This bean will be used to decode Feign client errors
+        return new FeignErrorDecoder();
+    }
 }

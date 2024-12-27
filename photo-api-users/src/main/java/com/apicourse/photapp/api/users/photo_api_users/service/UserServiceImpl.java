@@ -16,31 +16,40 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.apicourse.photapp.api.users.photo_api_users.data.AlbumServiceClient;
 import com.apicourse.photapp.api.users.photo_api_users.data.UserEntity;
 import com.apicourse.photapp.api.users.photo_api_users.data.UsersRepository;
 import com.apicourse.photapp.api.users.photo_api_users.shared.UserDto;
 import com.apicourse.photapp.api.users.photo_api_users.ui.model.AlbumResponseModel;
 
+import feign.FeignException;
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Slf4j
 public class UserServiceImpl implements UserService {
 
     private UsersRepository usersRepository;
 
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    private RestTemplate restTemplate;
+    // private RestTemplate restTemplate;
+    private AlbumServiceClient albumServiceClient;
 
     private Environment environment;
 
     @Autowired
     public UserServiceImpl(UsersRepository usersRepository, BCryptPasswordEncoder bCryptPasswordEncoder,
-            RestTemplate restTemplate, Environment environment) {
+            // RestTemplate restTemplate,
+            AlbumServiceClient albumServiceClient,
+            Environment environment) {
         this.usersRepository = usersRepository;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
-        this.restTemplate = restTemplate;
+        // this.restTemplate = restTemplate;
+        this.albumServiceClient = albumServiceClient;
         this.environment = environment;
     }
 
@@ -91,16 +100,24 @@ public class UserServiceImpl implements UserService {
         if (entity == null)
             throw new UsernameNotFoundException("User not found");
 
-        System.out.println("in api users "+entity.toString());
-        
-        UserDto dto = new ModelMapper().map(entity, UserDto.class);
-        String albumsUrl = String.format(environment.getProperty("albums.url") , userId);
+        System.out.println("in api users " + entity.toString());
 
-        ResponseEntity<List<AlbumResponseModel>> albumsList = restTemplate.exchange(
-                albumsUrl, HttpMethod.GET, null,
-                new ParameterizedTypeReference<List<AlbumResponseModel>>() {
-                });
-        List<AlbumResponseModel> albums = albumsList.getBody();
+        UserDto dto = new ModelMapper().map(entity, UserDto.class);
+
+        // String albumsUrl = String.format(environment.getProperty("albums.url") ,
+        // userId);
+        // ResponseEntity<List<AlbumResponseModel>> albumsList = restTemplate.exchange(
+        // albumsUrl, HttpMethod.GET, null,
+        // new ParameterizedTypeReference<List<AlbumResponseModel>>() {
+        // });
+        // List<AlbumResponseModel> albums = albumsList.getBody();
+
+        List<AlbumResponseModel> albums = null;
+        // try {
+            albums = albumServiceClient.getAlbums(userId);
+        // } catch (FeignException e) {
+        //     log.error(e.getLocalizedMessage());
+        // }
 
         dto.setAlbums(albums);
 
