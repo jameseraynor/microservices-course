@@ -1,123 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.1</version>
-		<relativePath /> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>com.api.course.photoapp.api</groupId>
-	<artifactId>api-gateway</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>api-gateway</name>
-	<description>Demo project for Spring Boot</description>
-	<url />
-	<licenses>
-		<license />
-	</licenses>
-	<developers>
-		<developer />
-	</developers>
-	<scm>
-		<connection />
-		<developerConnection />
-		<tag />
-		<url />
-	</scm>
-	<properties>
-		<java.version>21</java.version>
-		<spring-cloud.version>2024.0.0</spring-cloud.version>
-	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webflux</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<scope>annotationProcessor</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-gateway</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt-api</artifactId>
-			<version>0.12.6</version>
-		</dependency>
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt-impl</artifactId>
-			<version>0.12.6</version>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt-jackson</artifactId>
-			<version>0.12.6</version>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>io.projectreactor</groupId>
-			<artifactId>reactor-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.netty/netty-resolver-dns-native-macos -->
-		<dependency>
-			<groupId>io.netty</groupId>
-			<artifactId>netty-resolver-dns-native-macos</artifactId>
-			<version>4.1.116.Final</version>
-			<scope>runtime</scope>
-			<classifier>osx-aarch_64</classifier>
-		</dependency>
+    <!-- Spring Boot Parent -->
+    <!-- Provides dependency management for Spring Boot projects -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.1</version>
+        <relativePath /> <!-- lookup parent from repository -->
+    </parent>
 
-	</dependencies>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+    <!-- Project Information -->
+    <groupId>com.api.course.photoapp.api</groupId>
+    <artifactId>api-gateway</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>api-gateway</name>
+    <description>API Gateway Service for Microservices Architecture</description>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+    <!-- Project Properties -->
+    <!-- Centralized version management -->
+    <properties>
+        <java.version>21</java.version>
+        <spring-cloud.version>2024.0.0</spring-cloud.version>
+        <jwt.version>0.12.6</jwt.version>
+        <netty.version>4.1.116.Final</netty.version>
+    </properties>
+
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- Spring Cloud Gateway Dependencies -->
+        <!-- Core gateway functionality and service discovery -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <!-- Spring Cloud Config and Message Bus -->
+        <!-- Enables centralized configuration and dynamic updates -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Core Dependencies -->
+        <!-- Reactive web support and monitoring -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- Security Dependencies -->
+        <!-- JWT token handling -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>${jwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>${jwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <version>${jwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Development Tools -->
+        <!-- Lombok for reducing boilerplate code -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>annotationProcessor</scope>
+        </dependency>
+
+        <!-- Platform Specific Dependencies -->
+        <!-- MacOS specific Netty DNS resolver -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-resolver-dns-native-macos</artifactId>
+            <version>${netty.version}</version>
+            <scope>runtime</scope>
+            <classifier>osx-aarch_64</classifier>
+        </dependency>
+
+        <!-- Test Dependencies -->
+        <!-- Unit and integration testing support -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Dependency Management -->
+    <!-- Manages Spring Cloud dependency versions -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- Build Configuration -->
+    <!-- Defines how the project should be built -->
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven Plugin -->
+            <!-- Creates executable JAR -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!-- Configuration for Lombok -->
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
