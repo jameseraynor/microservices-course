@@ -1,20 +1,18 @@
 package com.apicourse.photapp.api.users.photo_api_users.service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.core.env.Environment;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import com.apicourse.photapp.api.users.photo_api_users.data.AlbumServiceClient;
 import com.apicourse.photapp.api.users.photo_api_users.data.UserEntity;
@@ -22,11 +20,7 @@ import com.apicourse.photapp.api.users.photo_api_users.data.UsersRepository;
 import com.apicourse.photapp.api.users.photo_api_users.shared.UserDto;
 import com.apicourse.photapp.api.users.photo_api_users.ui.model.AlbumResponseModel;
 
-import feign.FeignException;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 @Slf4j
@@ -112,12 +106,14 @@ public class UserServiceImpl implements UserService {
         // });
         // List<AlbumResponseModel> albums = albumsList.getBody();
 
+        log.debug("Before calling albums microservice");
         List<AlbumResponseModel> albums = null;
         // try {
             albums = albumServiceClient.getAlbums(userId);
         // } catch (FeignException e) {
         //     log.error(e.getLocalizedMessage());
         // }
+        log.debug("After calling albums microservice");
 
         dto.setAlbums(albums);
 

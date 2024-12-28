@@ -671,3 +671,655 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2024-12-27T13:32:32.638-06:00  INFO 237 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
 2024-12-27T13:32:32.651-06:00  INFO 237 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:2aab277a16eb775a37ab280713ac4c14 - deregister  status: 200
 2024-12-27T13:32:32.655-06:00  INFO 237 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-12-27T15:02:33.379-06:00  INFO [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 21.0.5 with PID 95572 (/Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums/target/classes started by javierjaramillo in /Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums)
+2024-12-27T15:02:33.381-06:00  INFO [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-27T15:02:33.398-06:00  INFO [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-27T15:02:33.398-06:00  INFO [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-27T15:02:33.786-06:00  INFO [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=06f6e6a2-5d3f-3287-9860-588a1277fe8d
+2024-12-27T15:02:33.949-06:00  INFO [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-12-27T15:02:33.954-06:00  INFO [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-27T15:02:33.954-06:00  INFO [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-27T15:02:33.974-06:00  INFO [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-27T15:02:33.974-06:00  INFO [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 576 ms
+2024-12-27T15:02:34.347-06:00  WARN [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-12-27T15:02:34.353-06:00  INFO [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-27T15:02:34.362-06:00  WARN [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'compositeCompatibilityVerifier' defined in class path resource [org/springframework/cloud/configuration/CompatibilityVerifierAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.configuration.CompositeCompatibilityVerifier]: Factory method 'compositeCompatibilityVerifier' threw exception with message: Spring Cloud/ Spring Boot version compatibility checks have failed: [[VerificationResult@674ec390 description = 'Spring Boot [3.4.1] is not compatible with this Spring Cloud release train', action = 'Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]']]
+2024-12-27T15:02:35.370-06:00  WARN [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] z.r.i.AsyncReporter$BoundedAsyncReporter : Timed out waiting for in-flight spans to send
+2024-12-27T15:02:35.376-06:00  INFO [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-27T15:02:35.406-06:00  INFO [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-27T15:02:35.416-06:00 ERROR [albums-ws , traceId=, spanId=] 95572 --- [albums-ws] [restartedMain] [                                                 ] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Your project setup is incompatible with our requirements due to following reasons:
+
+- Spring Boot [3.4.1] is not compatible with this Spring Cloud release train
+
+
+Action:
+
+Consider applying the following actions:
+
+- Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]
+
+
+2024-12-27T15:03:09.845-06:00  INFO [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 21.0.5 with PID 96291 (/Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums/target/classes started by javierjaramillo in /Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums)
+2024-12-27T15:03:09.846-06:00  INFO [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-27T15:03:09.866-06:00  INFO [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-27T15:03:09.867-06:00  INFO [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-27T15:03:10.222-06:00  INFO [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=53e9796f-b36d-34a1-8415-43f4cde2466c
+2024-12-27T15:03:10.379-06:00  INFO [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-12-27T15:03:10.384-06:00  INFO [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-27T15:03:10.384-06:00  INFO [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-27T15:03:10.409-06:00  INFO [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-27T15:03:10.409-06:00  INFO [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 542 ms
+2024-12-27T15:03:10.701-06:00  WARN [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-12-27T15:03:10.709-06:00  INFO [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-27T15:03:10.718-06:00  WARN [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'compositeCompatibilityVerifier' defined in class path resource [org/springframework/cloud/configuration/CompatibilityVerifierAutoConfiguration.class]: Failed to instantiate [org.springframework.cloud.configuration.CompositeCompatibilityVerifier]: Factory method 'compositeCompatibilityVerifier' threw exception with message: Spring Cloud/ Spring Boot version compatibility checks have failed: [[VerificationResult@3c30b2ca description = 'Spring Boot [3.4.1] is not compatible with this Spring Cloud release train', action = 'Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]']]
+2024-12-27T15:03:10.721-06:00  INFO [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-27T15:03:10.733-06:00  INFO [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-12-27T15:03:10.739-06:00 ERROR [albums-ws , traceId=, spanId=] 96291 --- [albums-ws] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Your project setup is incompatible with our requirements due to following reasons:
+
+- Spring Boot [3.4.1] is not compatible with this Spring Cloud release train
+
+
+Action:
+
+Consider applying the following actions:
+
+- Change Spring Boot version to one of the following versions [3.2.x, 3.3.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]
+
+
+2024-12-27T15:05:01.292-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 21.0.5 with PID 98288 (/Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums/target/classes started by javierjaramillo in /Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums)
+2024-12-27T15:05:01.293-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-27T15:05:01.308-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-27T15:05:01.308-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-27T15:05:01.626-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7688154d-c0ef-35c0-9a5e-3057583ef5d5
+2024-12-27T15:05:01.801-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-12-27T15:05:01.804-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-27T15:05:01.804-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-12-27T15:05:01.825-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-27T15:05:01.825-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 517 ms
+2024-12-27T15:05:02.095-06:00  WARN [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-12-27T15:05:02.101-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-27T15:05:02.112-06:00  WARN [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-27T15:05:02.114-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-12-27T15:05:02.148-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59019 (http) with context path ''
+2024-12-27T15:05:02.148-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 59019
+2024-12-27T15:05:02.150-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-12-27T15:05:02.161-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-12-27T15:05:02.162-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T15:05:02.170-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-27T15:05:02.170-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-27T15:05:02.170-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-27T15:05:02.171-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-27T15:05:02.171-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-27T15:05:02.171-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-12-27T15:05:02.171-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-27T15:05:02.282-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-27T15:05:02.282-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-12-27T15:05:02.283-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-12-27T15:05:02.284-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1735333502284 with initial instances count: 2
+2024-12-27T15:05:02.285-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2024-12-27T15:05:02.285-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1735333502285, current=UP, previous=STARTING]
+2024-12-27T15:05:02.286-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:cf325ab5465d92e2341411415778ddd4: registering service...
+2024-12-27T15:05:02.298-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 1.197 seconds (process running for 1.427)
+2024-12-27T15:05:02.300-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:cf325ab5465d92e2341411415778ddd4 - registration status: 204
+2024-12-27T15:05:04.464-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-27T15:05:04.464-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-27T15:05:04.464-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-27T15:05:19.052-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 8 class path changes (0 additions, 0 deletions, 8 modifications)
+2024-12-27T15:05:19.053-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ALBUMS-WS with eureka with status DOWN
+2024-12-27T15:05:19.053-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1735333519053, current=DOWN, previous=UP]
+2024-12-27T15:05:19.054-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:cf325ab5465d92e2341411415778ddd4: registering service...
+2024-12-27T15:05:19.056-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-27T15:05:19.057-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-12-27T15:05:19.063-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:cf325ab5465d92e2341411415778ddd4 - registration status: 204
+2024-12-27T15:05:19.071-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-12-27T15:05:22.078-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-12-27T15:05:22.088-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:cf325ab5465d92e2341411415778ddd4 - deregister  status: 200
+2024-12-27T15:05:22.094-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-12-27T15:05:22.144-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 21.0.5 with PID 98288 (/Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums/target/classes started by javierjaramillo in /Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums)
+2024-12-27T15:05:22.144-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-27T15:05:22.235-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7688154d-c0ef-35c0-9a5e-3057583ef5d5
+2024-12-27T15:05:22.251-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-12-27T15:05:22.251-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-27T15:05:22.251-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-12-27T15:05:22.257-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-27T15:05:22.257-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 112 ms
+2024-12-27T15:05:22.321-06:00  WARN [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-12-27T15:05:22.323-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-27T15:05:22.326-06:00  WARN [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-27T15:05:22.327-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-12-27T15:05:22.335-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59137 (http) with context path ''
+2024-12-27T15:05:22.335-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 59137
+2024-12-27T15:05:22.336-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-12-27T15:05:22.336-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-12-27T15:05:22.337-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T15:05:22.339-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-27T15:05:22.339-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-27T15:05:22.339-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-27T15:05:22.339-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-27T15:05:22.339-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-27T15:05:22.339-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-12-27T15:05:22.339-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-27T15:05:22.353-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-27T15:05:22.353-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-12-27T15:05:22.354-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-12-27T15:05:22.354-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1735333522354 with initial instances count: 3
+2024-12-27T15:05:22.354-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2024-12-27T15:05:22.354-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1735333522354, current=UP, previous=STARTING]
+2024-12-27T15:05:22.354-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:99df488a4b5b538df9fdde0bb86868ea: registering service...
+2024-12-27T15:05:22.359-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 0.227 seconds (process running for 21.487)
+2024-12-27T15:05:22.359-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:99df488a4b5b538df9fdde0bb86868ea - registration status: 204
+2024-12-27T15:05:22.360-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-27T15:05:23.738-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 8 class path changes (0 additions, 0 deletions, 8 modifications)
+2024-12-27T15:05:23.740-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-7] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ALBUMS-WS with eureka with status DOWN
+2024-12-27T15:05:23.740-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1735333523740, current=DOWN, previous=UP]
+2024-12-27T15:05:23.740-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:99df488a4b5b538df9fdde0bb86868ea: registering service...
+2024-12-27T15:05:23.744-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-27T15:05:23.750-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:99df488a4b5b538df9fdde0bb86868ea - registration status: 204
+2024-12-27T15:05:23.753-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-12-27T15:05:26.760-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-12-27T15:05:26.769-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:99df488a4b5b538df9fdde0bb86868ea - deregister  status: 200
+2024-12-27T15:05:26.773-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-7] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-12-27T15:05:26.820-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 21.0.5 with PID 98288 (/Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums/target/classes started by javierjaramillo in /Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums)
+2024-12-27T15:05:26.820-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-27T15:05:26.884-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7688154d-c0ef-35c0-9a5e-3057583ef5d5
+2024-12-27T15:05:26.895-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-12-27T15:05:26.896-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-27T15:05:26.896-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-12-27T15:05:26.902-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-27T15:05:26.902-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 81 ms
+2024-12-27T15:05:26.950-06:00  WARN [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-12-27T15:05:26.952-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-27T15:05:26.955-06:00  WARN [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-27T15:05:26.956-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-12-27T15:05:26.963-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 59161 (http) with context path ''
+2024-12-27T15:05:26.963-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 59161
+2024-12-27T15:05:26.964-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-12-27T15:05:26.964-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-12-27T15:05:26.964-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T15:05:26.965-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-27T15:05:26.965-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-27T15:05:26.965-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-27T15:05:26.965-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-27T15:05:26.965-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-27T15:05:26.965-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-12-27T15:05:26.965-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-27T15:05:26.975-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-27T15:05:26.975-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-12-27T15:05:26.975-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-12-27T15:05:26.975-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1735333526975 with initial instances count: 3
+2024-12-27T15:05:26.976-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2024-12-27T15:05:26.976-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1735333526976, current=UP, previous=STARTING]
+2024-12-27T15:05:26.976-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:4e0721877b893ae3a60e165ec85fdcfc: registering service...
+2024-12-27T15:05:26.980-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 0.17 seconds (process running for 26.108)
+2024-12-27T15:05:26.980-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:4e0721877b893ae3a60e165ec85fdcfc - registration status: 204
+2024-12-27T15:05:26.981-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-27T15:07:01.518-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [http-nio-auto-3-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-27T15:07:01.519-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [http-nio-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-27T15:07:01.520-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [http-nio-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-27T15:07:01.559-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [http-nio-auto-3-exec-1] c.a.p.a.a.i.c.AlbumsController           : Returning 2 albums
+2024-12-27T15:10:11.680-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-12-27T15:10:11.684-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-13] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ALBUMS-WS with eureka with status DOWN
+2024-12-27T15:10:11.684-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1735333811684, current=DOWN, previous=UP]
+2024-12-27T15:10:11.684-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:4e0721877b893ae3a60e165ec85fdcfc: registering service...
+2024-12-27T15:10:11.691-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-13] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-12-27T15:10:11.691-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-13] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-12-27T15:10:11.691-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:4e0721877b893ae3a60e165ec85fdcfc - registration status: 204
+2024-12-27T15:10:11.696-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-12-27T15:10:14.704-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-12-27T15:10:14.710-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:4e0721877b893ae3a60e165ec85fdcfc - deregister  status: 200
+2024-12-27T15:10:14.714-06:00  INFO [albums-ws , traceId=, spanId=] 98288 --- [Thread-13] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-12-27T15:10:14.767-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 21.0.5 with PID 98288 (/Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums/target/classes started by javierjaramillo in /Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums)
+2024-12-27T15:10:14.767-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-27T15:10:14.830-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7688154d-c0ef-35c0-9a5e-3057583ef5d5
+2024-12-27T15:10:14.841-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-12-27T15:10:14.842-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-27T15:10:14.842-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-12-27T15:10:14.847-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-27T15:10:14.848-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 81 ms
+2024-12-27T15:10:14.890-06:00  WARN [albums-ws,,] 98288 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-12-27T15:10:14.893-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-27T15:10:14.895-06:00  WARN [albums-ws,,] 98288 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-27T15:10:14.896-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-12-27T15:10:14.902-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 61036 (http) with context path ''
+2024-12-27T15:10:14.902-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 61036
+2024-12-27T15:10:14.902-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-12-27T15:10:14.903-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-12-27T15:10:14.903-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T15:10:14.903-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-27T15:10:14.903-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-27T15:10:14.903-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-27T15:10:14.903-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-27T15:10:14.903-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-27T15:10:14.903-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-12-27T15:10:14.903-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-27T15:10:14.915-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-27T15:10:14.916-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-12-27T15:10:14.916-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-12-27T15:10:14.917-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1735333814917 with initial instances count: 4
+2024-12-27T15:10:14.917-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2024-12-27T15:10:14.917-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1735333814917, current=UP, previous=STARTING]
+2024-12-27T15:10:14.917-06:00  INFO [albums-ws,,] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:df870d7269fdf52c3a769a29863aad9e: registering service...
+2024-12-27T15:10:14.921-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 0.166 seconds (process running for 314.048)
+2024-12-27T15:10:14.922-06:00  INFO [albums-ws,,] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:df870d7269fdf52c3a769a29863aad9e - registration status: 204
+2024-12-27T15:10:14.922-06:00  INFO [albums-ws,,] 98288 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-12-27T15:11:46.778-06:00  INFO [albums-ws,,] 98288 --- [http-nio-auto-4-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-27T15:11:46.779-06:00  INFO [albums-ws,,] 98288 --- [http-nio-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-27T15:11:46.779-06:00  INFO [albums-ws,,] 98288 --- [http-nio-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-27T15:11:46.782-06:00  INFO [albums-ws,,] 98288 --- [http-nio-auto-4-exec-1] c.a.p.a.a.i.c.AlbumsController           : Returning 2 albums
+2024-12-27T15:12:04.564-06:00  INFO [albums-ws,,] 98288 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ALBUMS-WS with eureka with status DOWN
+2024-12-27T15:12:04.565-06:00  INFO [albums-ws,,] 98288 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1735333924565, current=DOWN, previous=UP]
+2024-12-27T15:12:04.565-06:00  INFO [albums-ws,,] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:df870d7269fdf52c3a769a29863aad9e: registering service...
+2024-12-27T15:12:04.577-06:00  INFO [albums-ws,,] 98288 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-12-27T15:12:04.577-06:00  INFO [albums-ws,,] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8010/eureka/} exception=I/O error on POST request for "http://localhost:8010/eureka/apps/ALBUMS-WS": Connect to http://localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8010/eureka/apps/ALBUMS-WS": Connect to http://localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 21 more
+
+2024-12-27T15:12:04.578-06:00  WARN [albums-ws,,] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8010/eureka/apps/ALBUMS-WS": Connect to http://localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2024-12-27T15:12:04.584-06:00  INFO [albums-ws,,] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8010/eureka/}, exception=I/O error on POST request for "http://localhost:8010/eureka/apps/ALBUMS-WS": Connect to http://localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8010/eureka/apps/ALBUMS-WS": Connect to http://localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 22 more
+
+2024-12-27T15:12:04.585-06:00  WARN [albums-ws,,] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8010/eureka/apps/ALBUMS-WS": Connect to http://localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2024-12-27T15:12:04.585-06:00  WARN [albums-ws,,] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:df870d7269fdf52c3a769a29863aad9e - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-2.0.0.jar:2.0.0]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-12-27T15:12:04.587-06:00  WARN [albums-ws,,] 98288 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) ~[eureka-client-2.0.0.jar:2.0.0]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-12-27T15:12:04.588-06:00  INFO [albums-ws,,] 98288 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-12-27T15:12:04.592-06:00  INFO [albums-ws,,] 98288 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8010/eureka/}, exception=I/O error on DELETE request for "http://localhost:8010/eureka/apps/ALBUMS-WS/albums-ws:df870d7269fdf52c3a769a29863aad9e": Connect to http://localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8010/eureka/apps/ALBUMS-WS/albums-ws:df870d7269fdf52c3a769a29863aad9e": Connect to http://localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:424)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:382)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:212)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1170)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 38 more
+
+2024-12-27T15:12:04.592-06:00  WARN [albums-ws,,] 98288 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8010/eureka/apps/ALBUMS-WS/albums-ws:df870d7269fdf52c3a769a29863aad9e": Connect to http://localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2024-12-27T15:12:04.592-06:00 ERROR [albums-ws,,] 98288 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:df870d7269fdf52c3a769a29863aad9e - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892) ~[eureka-client-2.0.0.jar:2.0.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:424) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:382) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:212) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1177) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1170) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139) ~[spring-boot-3.0.4.jar:3.0.4]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108) ~[spring-boot-3.0.4.jar:3.0.4]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-12-27T15:12:04.595-06:00  INFO [albums-ws,,] 98288 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-12-27T15:12:33.552-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Starting PhotoAppApiAlbumsApplication using Java 21.0.5 with PID 7442 (/Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums/target/classes started by javierjaramillo in /Volumes/External Home/homeEx/Desktop/microservices-course/PhotoAppApiAlbums)
+2024-12-27T15:12:33.554-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-12-27T15:12:33.609-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-27T15:12:33.610-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-27T15:12:34.443-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a001a868-629c-3b95-b92b-dd5a999bfb94
+2024-12-27T15:12:34.759-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-12-27T15:12:34.767-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-27T15:12:34.768-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-12-27T15:12:34.800-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-27T15:12:34.801-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1191 ms
+2024-12-27T15:12:35.632-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-27T15:12:35.650-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-27T15:12:35.690-06:00  WARN [albums-ws,,] 7442 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-27T15:12:35.699-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-12-27T15:12:35.753-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 61846 (http) with context path ''
+2024-12-27T15:12:35.755-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 61846
+2024-12-27T15:12:35.758-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-12-27T15:12:35.781-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-12-27T15:12:35.784-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T15:12:35.797-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-27T15:12:35.798-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-27T15:12:35.798-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-27T15:12:35.798-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-27T15:12:35.798-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-27T15:12:35.798-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-12-27T15:12:35.798-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-27T15:12:35.928-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-27T15:12:35.929-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-12-27T15:12:35.932-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-12-27T15:12:35.943-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1735333955938 with initial instances count: 0
+2024-12-27T15:12:35.945-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2024-12-27T15:12:35.946-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1735333955946, current=UP, previous=STARTING]
+2024-12-27T15:12:35.948-06:00  INFO [albums-ws,,] 7442 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:a8b67087e23bc7d5a36fcd0e5c51326d: registering service...
+2024-12-27T15:12:35.976-06:00  INFO [albums-ws,,] 7442 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 2.766 seconds (process running for 3.23)
+2024-12-27T15:12:36.014-06:00  INFO [albums-ws,,] 7442 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:a8b67087e23bc7d5a36fcd0e5c51326d - registration status: 204
+2024-12-27T15:12:36.416-06:00  INFO [albums-ws,,] 7442 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-27T15:12:36.417-06:00  INFO [albums-ws,,] 7442 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-27T15:12:36.417-06:00  INFO [albums-ws,,] 7442 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-27T15:13:05.931-06:00  INFO [albums-ws,,] 7442 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-27T15:13:05.932-06:00  INFO [albums-ws,,] 7442 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-27T15:13:05.932-06:00  INFO [albums-ws,,] 7442 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-27T15:13:05.932-06:00  INFO [albums-ws,,] 7442 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-27T15:13:05.932-06:00  INFO [albums-ws,,] 7442 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-27T15:13:05.932-06:00  INFO [albums-ws,,] 7442 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2024-12-27T15:13:05.932-06:00  INFO [albums-ws,,] 7442 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-27T15:13:05.943-06:00  INFO [albums-ws,,] 7442 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-27T15:13:17.895-06:00  INFO [albums-ws,676f186d93c5f78402ea9f3e90f5a482,29b91bca6c250505] 7442 --- [http-nio-auto-1-exec-1] c.a.p.a.a.i.c.AlbumsController           : Returning 2 albums
+2024-12-27T15:17:35.807-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T15:22:35.818-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T15:27:35.803-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T15:49:44.289-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T16:22:30.538-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T16:29:43.426-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T16:34:43.445-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T16:39:43.463-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T16:44:43.481-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T16:49:43.498-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T16:54:43.515-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T16:59:43.548-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T17:04:43.565-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T17:09:43.585-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T17:14:43.600-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T18:12:13.846-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T18:20:08.129-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T18:25:08.238-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T18:30:08.350-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T18:35:08.457-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T18:40:08.451-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T18:45:08.454-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T18:50:08.456-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T18:55:08.458-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T19:00:08.461-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T19:05:08.464-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T19:10:08.490-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T19:15:08.499-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T19:20:08.505-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T19:25:08.507-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T19:30:08.511-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T19:35:08.515-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T19:40:08.519-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T19:45:08.626-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T19:50:08.642-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T19:55:08.655-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T20:00:08.671-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T20:05:08.686-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T20:10:08.700-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T20:15:08.655-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T20:20:08.663-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T20:25:08.674-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T20:30:08.682-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T20:35:08.689-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T20:40:08.744-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T20:45:08.758-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T20:50:08.775-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T20:55:08.892-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T21:00:08.970-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T21:05:09.095-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T21:10:09.074-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T21:15:09.088-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T21:37:35.494-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T21:42:35.504-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T21:47:35.512-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T21:52:35.516-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T21:57:35.529-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-27T22:02:35.475-06:00  INFO [albums-ws,,] 7442 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
