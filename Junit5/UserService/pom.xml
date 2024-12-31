@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Project Object Model (POM) for User Service
+     This is the core configuration file for Maven build and dependency management -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- Maven POM model version - should be 4.0.0 for Maven 2 and 3 -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Basic Project Information -->
+    <!-- Group ID typically represents organization or project group -->
+    <groupId>org.example</groupId>
+    <!-- Artifact ID is the unique name for this project -->
+    <artifactId>UserService</artifactId>
+    <!-- Version with SNAPSHOT indicating this is a development version -->
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- Project Properties
+         Defines global variables and configuration settings -->
+    <properties>
+        <!-- Java version settings for source and target compatibility -->
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <!-- Ensures proper encoding for resource files -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- Project Dependencies Section
+         Defines all external libraries needed by the project -->
+    <dependencies>
+        <!-- JUnit Jupiter - Main testing framework for Java
+             Scope: test - only available during testing -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.11.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Mockito JUnit Jupiter Integration
+             Provides mocking capabilities for unit tests
+             Scope: test - only available during testing -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>5.14.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Build Configuration Section
+         Configures how the project should be built -->
+    <build>
+        <plugins>
+            <!-- Maven Surefire Plugin
+                 Responsible for running unit tests during the build -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.2</version>
+                <configuration>
+                    <!-- Continues build even if tests fail -->
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Surefire Report Plugin
+                 Generates HTML reports for test results -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>3.5.2</version>
+                <executions>
+                    <!-- Configures when the report should be generated -->
+                    <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- JaCoCo Maven Plugin
+                 Provides code coverage analysis for Java projects -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.12</version>
+                <executions>
+                    <!-- Prepares the property pointing to the JaCoCo runtime agent -->
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <!-- Creates code coverage report after tests are run -->
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
