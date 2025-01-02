@@ -6,6 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/ClassesOrderDemo/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ClassesOrderDemo/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/ClassesOrderDemo/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/UsersServiceSpringBoot/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/UsersServiceSpringBoot/src/test" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
